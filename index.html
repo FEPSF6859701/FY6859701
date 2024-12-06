@@ -233,11 +233,12 @@ Available at:<a href="//www.sciencedirect.com/science/article/pii/S0940960220300
       // Function to calculate and display total word count from selected sections
       function displayTotalWordCount() {
         // Calculate word count for each section and accumulate the total
-        const IntroductionCount = displayWordCount("Introduction_InText");
-        const Abstractcount = displayWordCount("Abstract_InText");
-        const Maincount = displayTotalWordCount("AR’s impact on student education_InText + Student's experience with AR");
+        const IntroductionCount = displayWordCount("Introduction");
+        const Abstractcount = displayWordCount("Abstract");
+        const Maincount = displayTotalWordCount("AR’s impact on student education");
+        const Researchcount = displayTotalWordCount("Student's experience with AR");
         // Calculate the sum of all selected sections
-        const totalWordCount = IntroductionCount + Maincount;
+        const totalWordCount = IntroductionCount + Maincount + Researchcount + Abstractcount;
         // Display the total word count
         document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
       }
